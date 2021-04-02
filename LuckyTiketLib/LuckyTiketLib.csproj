@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="LuckyTicket.cs" />
     <Compile Include="MoskowLuckyTicket.cs" />
+    <Compile Include="PiterLuckyTicket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
