@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountTicketEventArgs.cs" />
     <Compile Include="LuckyTicket.cs" />
+    <Compile Include="LuckyTicketsCounter.cs" />
     <Compile Include="MoskowLuckyTicket.cs" />
     <Compile Include="PiterLuckyTicket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
