@@ -6,11 +6,35 @@ using System.Threading.Tasks;
 
 namespace LuckyTiketLib
 {
-    class PiterLuckyTicket : LuckyTicket
+    public class PiterLuckyTicket : LuckyTicket
     {
         public override void GetLuckyTicket(int stratRange, int finishRange)
         {
-            throw new NotImplementedException();
+            for (int i = stratRange; i < finishRange; i++)
+            {
+                string luckyTicket = string.Format($"{i}");
+                int firstThreeNumbers = 0;
+                int remeaningThreeNumbers = 0;
+
+                var numbersList = luckyTicket.ToCharArray();
+
+                for (int j = 0; j < numbersList.Length; j++)
+                {
+                    if ((numbersList[j] % 2) == 0) 
+                    {
+                        firstThreeNumbers += numbersList[j];
+                    }
+                    else
+                    {
+                        remeaningThreeNumbers += numbersList[j];
+                    }
+                }
+
+                if (firstThreeNumbers == remeaningThreeNumbers)
+                {
+                    GetCountTicket(i);
+                }
+            }
         }
     }
 }

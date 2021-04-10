@@ -6,16 +6,29 @@ using System.Threading.Tasks;
 
 namespace LuckyTiketLib
 {
-    class MoskowLuckyTicket : LuckyTicket
+    public class MoskowLuckyTicket : LuckyTicket
     {
         public override void GetLuckyTicket(int stratRange, int finishRange)
         {
             for (int i = stratRange; i < finishRange; i++)
             {
                 string luckyTicket = string.Format($"{i}");
+                int firstThreeNumbers = 0;
+                int remeaningThreeNumbers = 0;
 
-                int firstThreeNumbers = (int)luckyTicket[0] + (int)luckyTicket[1] + (int)luckyTicket[2];
-                int remeaningThreeNumbers = (int)luckyTicket[3] + (int)luckyTicket[4] + (int)luckyTicket[5];
+                var numbersList = luckyTicket.ToCharArray();
+
+                for (int j = 0; j < numbersList.Length; j++)
+                {
+                    if (j < 3)
+                    {
+                        firstThreeNumbers += numbersList[j];
+                    }
+                    else
+                    {
+                        remeaningThreeNumbers += numbersList[j];
+                    }
+                }
 
                 if (firstThreeNumbers == remeaningThreeNumbers)
                 {

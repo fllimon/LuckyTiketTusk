@@ -9,8 +9,7 @@ namespace LuckyTiketLib
     public abstract class LuckyTicket
     {
         protected LuckyTicketsCounter _countLuckyTicket;
-        private int _countTicket = 0;
-
+        
         public event LuckyTicketsCounter CountLuckyTicket
         {
             add
