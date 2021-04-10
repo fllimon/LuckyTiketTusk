@@ -16,7 +16,7 @@ namespace LuckyTicketView
             int finishRange = int.Parse(args[1]);
 
             LuckyTicket moskowLuckyTicket = new MoskowLuckyTicket();
-            LuckyTicket piterLuckyTicket = new MoskowLuckyTicket();
+            LuckyTicket piterLuckyTicket = new PiterLuckyTicket();
             Analyzer moskowTicketAnalyzer = new Analyzer(moskowLuckyTicket);
             Analyzer piterTicketAnalyzer = new Analyzer(piterLuckyTicket);
 
