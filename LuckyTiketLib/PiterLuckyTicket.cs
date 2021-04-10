@@ -20,7 +20,7 @@ namespace LuckyTiketLib
 
                 for (int j = 0; j < numbersList.Length; j++)
                 {
-                    if ((numbersList[j] % 2) == 0) 
+                    if ((j % 2) == 0) 
                     {
                         firstThreeNumbers += numbersList[j];
                     }
