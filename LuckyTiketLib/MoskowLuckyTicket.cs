@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LuckyTiketLib.Interface;
 
 namespace LuckyTiketLib
 {
-    public class MoskowLuckyTicket : LuckyTicket
+    class MoskowLuckyTicket : LuckyTicket
     {
         public override void GetLuckyTicket(int stratRange, int finishRange)
         {

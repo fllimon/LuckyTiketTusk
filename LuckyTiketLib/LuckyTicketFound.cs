@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace LuckyTiketLib
 {
-    public delegate void LuckyTicketsCounter(object sender, CountTicketEventArgs args);
+    public delegate void LuckyTicketFound(object sender, CountTicketEventArgs args);
 }

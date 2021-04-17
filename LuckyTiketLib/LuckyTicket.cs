@@ -4,21 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using LuckyTiketLib.Interface;
+
 namespace LuckyTiketLib
 {
-    public abstract class LuckyTicket
+    abstract class LuckyTicket : ILuckyTicket
     {
-        protected LuckyTicketsCounter _countLuckyTicket;
+        protected LuckyTicketFound _luckyTicketFounded;
         
-        public event LuckyTicketsCounter CountLuckyTicket
+        public event LuckyTicketFound LuckyTicketFounded
         {
             add
             {
-                _countLuckyTicket += value;
+                _luckyTicketFounded += value;
             }
             remove
             {
-                _countLuckyTicket -= value;
+                _luckyTicketFounded -= value;
             }
         }
 
@@ -26,9 +28,9 @@ namespace LuckyTiketLib
 
         protected void GetCountTicket(int ticket)
         {
-            if (_countLuckyTicket != null)
+            if (_luckyTicketFounded != null)
             {
-                _countLuckyTicket(this, new CountTicketEventArgs(ticket));
+                _luckyTicketFounded(this, new CountTicketEventArgs(ticket));
             }        
         }
     }

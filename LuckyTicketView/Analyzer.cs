@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using LuckyTiketLib;
+using LuckyTiketLib.Interface;
 
 namespace LuckyTicketView
 {
@@ -13,17 +14,17 @@ namespace LuckyTicketView
         #region =======------ PRIVATE DATA --------=======
 
         private int _countTickets = 0;
-        private readonly LuckyTicket _ticket;
+        private readonly ILuckyTicket _ticket;
 
         #endregion
 
         #region ======----- CTOR -----======
 
-        public Analyzer(LuckyTicket ticket)
+        public Analyzer(ILuckyTicket ticket)
         {
             _ticket = ticket;
 
-            _ticket.CountLuckyTicket += GetCountTicket;
+            _ticket.LuckyTicketFounded += GetCountTicket;
         }
 
         #endregion

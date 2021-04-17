@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTiketLib
 {
-    public class PiterLuckyTicket : LuckyTicket
+    class PiterLuckyTicket : LuckyTicket
     {
         public override void GetLuckyTicket(int stratRange, int finishRange)
         {
