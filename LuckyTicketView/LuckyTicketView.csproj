@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Analyzer.cs" />
     <Compile Include="ConsoleController.cs" />
+    <Compile Include="DataConvertor.cs" />
     <Compile Include="DataValidator.cs" />
     <Compile Include="DefaultSettings.cs" />
     <Compile Include="Interface\IAnalyzer.cs" />

@@ -15,8 +15,8 @@ namespace LuckyTicketView
         {
             try
             {
-                int startRange = int.Parse(args[0]);
-                int finishRange = int.Parse(args[1]);
+                int startRange = DataConvertor.ConvertNumber(args[0]);
+                int finishRange = DataConvertor.ConvertNumber(args[1]);
 
                 DataValidator validator = new DataValidator();
                 View ui = new View();
