@@ -13,25 +13,32 @@ namespace LuckyTicketView
     {
         static void Main(string[] args)
         {
-            int startRange = int.Parse(args[0]);
-            int finishRange = int.Parse(args[1]);
+            try
+            {
+                int startRange = int.Parse(args[0]);
+                int finishRange = int.Parse(args[1]);
 
-            LuckyTicketInitializer ticket = new LuckyTicketInitializer();
+                DataValidator validator = new DataValidator();
+                View ui = new View();
 
-            ILuckyTicket moskowLuckyTiket = ticket.InitializeMoskowTicket();
-            ILuckyTicket piterLuckyTiket = ticket.InitializePiterTicket();
+                bool result = validator.IsValidValue(startRange, finishRange);
 
-            Analyzer moskowTicketAnalyzer = new Analyzer(moskowLuckyTiket);
-            Analyzer piterTicketAnalyzer = new Analyzer(piterLuckyTiket);
+                if (result)
+                {
+                    ConsoleController _startApp = new ConsoleController(startRange, finishRange);
+                    _startApp.Run();
+                }
+                else
+                {
+                    ui.PrintInstructions();
 
-            moskowLuckyTiket.GetLuckyTicket(startRange, finishRange);
-            Console.WriteLine($"Moskow Tickets: {moskowTicketAnalyzer.CountTicket}");
-
-            Console.WriteLine();
-            Console.WriteLine();
-
-            piterLuckyTiket.GetLuckyTicket(startRange, finishRange);
-            Console.WriteLine($"Piter Tickets: {piterTicketAnalyzer.CountTicket}");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             Console.ReadKey();
         }

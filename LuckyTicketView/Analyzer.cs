@@ -9,7 +9,7 @@ using LuckyTiketLib.Interface;
 
 namespace LuckyTicketView
 {
-    class Analyzer
+    class Analyzer : IAnalyzer
     {
         #region =======------ PRIVATE DATA --------=======
 
