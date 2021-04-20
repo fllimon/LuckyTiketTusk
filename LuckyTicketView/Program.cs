@@ -25,6 +25,8 @@ namespace LuckyTicketView
 
                 if (result)
                 {
+                    string filePath = ui.GetFilePath();
+
                     ConsoleController _startApp = new ConsoleController(startRange, finishRange);
                     _startApp.Run();
                 }

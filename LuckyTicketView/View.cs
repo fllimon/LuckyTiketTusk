@@ -17,5 +17,12 @@ namespace LuckyTicketView
         {
             Console.WriteLine($"Total lucky tickets in the range: {result.CountTicket}");
         }
+
+        public string GetFilePath()
+        {
+            Console.Write(DefaultSettings.USER_MESSAGE);
+
+            return Console.ReadLine();
+        }
     }
 }

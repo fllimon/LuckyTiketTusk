@@ -12,5 +12,6 @@ namespace LuckyTicketView
         public const int MAX_TICKET_RANGE = 999999;
         public const string INSTRUCTION = "1. Specify the path to the text file\n" +
                                               "2. In file condition must be <Moskow> or <Piter>.";
+        public const string USER_MESSAGE = "Specify the path to the file: ";
     }
 }
